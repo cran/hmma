@@ -1,7 +1,7 @@
 Package: hmma
 Type: Package
 Title: Constructs Asymmetric Hidden Markov Models
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: 
     c(person(given = "Marcos L.P",
              family = "Bueno",
@@ -22,13 +22,13 @@ Authors@R:
       person(given = "Robert",
              family = "Ness",
              role = "ctb"),
-      person("Robert Gentleman and Ross Ihaka",
+      person(given = "Robert Gentleman and Ross Ihaka",
              role = "cph"),
-      person("The R Development Core Team",
+      person(given = "The R Development Core Team",
              role = "cph"),
-      person("The R Foundation",
+      person(given = "The R Foundation",
              role = "cph"))
-Description: Asymmetric hidden Markov model (HMM-A) learning. 
+Description: Asymmetric hidden Markov model (HMM-A) learning.
    HMM-As are similar to regular HMMs, but use Bayesian Networks (BNs) in 
    their emission distribution. The HMM-As can therefore offer more problem 
    insight [Bueno et al. 2017, <doi:10.1016/j.ijar.2017.05.011>].
@@ -41,7 +41,7 @@ Suggests: knitr, testthat, rmarkdown
 Imports: bnlearn, mhsmm, MCMCpack, Rgraphviz, graph, methods
 RoxygenNote: 7.1.0
 NeedsCompilation: yes
-Packaged: 2020-04-08 10:12:52 UTC; joopthibaudier
+Packaged: 2020-06-26 13:05:07 UTC; joopthibaudier
 Author: Marcos L.P Bueno [aut],
   Arjen Hommersom [aut, cre],
   Joop Thibaudier [aut],
@@ -52,4 +52,4 @@ Author: Marcos L.P Bueno [aut],
   The R Foundation [cph]
 Maintainer: Arjen Hommersom <arjen.hommersom@ou.nl>
 Repository: CRAN
-Date/Publication: 2020-04-08 16:00:02 UTC
+Date/Publication: 2020-06-26 22:50:03 UTC

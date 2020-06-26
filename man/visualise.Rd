@@ -4,29 +4,80 @@
 \alias{visualise}
 \title{Visualise the HMM-A}
 \usage{
-visualise(model, numDigitsRound = 2)
+visualise(
+  model,
+  minProb = 0,
+  numDigitsRound = 2,
+  relateWidthWithWeight = TRUE,
+  widthType = "linear",
+  minWidth = 0.05,
+  maxWidth = 5
+)
 }
 \arguments{
 \item{model}{The model.}
 
+\item{minProb}{The minimum probability of an arc (initial or transition) to
+be drawn in the visualisation (see details).}
+
 \item{numDigitsRound}{The amount of decimals that should be presented in the
 graph.}
+
+\item{relateWidthWithWeight}{An edge with a high weight will be drawn with a
+thicker line compared to an edge with a lower weight.}
+
+\item{widthType}{The thickness function for the lines. Defaults to linear
+function. When \code{sigmoid} is used, a sigmoid function is used to
+determine the thickness.}
+
+\item{minWidth}{The minimum thickness for a line. Only used when
+\code{relateWidthWithWeight} is \code{TRUE}}
+
+\item{maxWidth}{The maximum thickness for a line. Only used when
+\code{relateWidthWithWeight} is \code{TRUE}}
 }
 \description{
 The function \cite{visualise} shows a graphical representation of the found
 HMM-A. Only the initial distribution and transition distribution are shown.
 Each state contains a Bayesian network, these would be unreadble when
 displayed within each state. The \code{bnlearn}
-\code{\link[bnlearn]{graphviz.plot}} method is used to display the bayesian
-networks.
+\code{\link[bnlearn]{graphviz.plot}} method can be used to display the
+bayesian networks.
+}
+\details{
+Per default, all transitions (initial and transition) are drawn on the
+canvas. For larger HMM-As, the visualisation can become cluttered with arcs
+that have a low probability. By setting the \code{minProb}, an arc is only
+drawn when it is equal to or greater than the specified \code{minProb}. The
+default value for \code{minProb} is 0.00 (all arcs are drawn).
+
+To further improve the visualisation, edge line width can be related to the
+respective weight of the edge. When \code{relateWeightWithThickness} is
+\code{TRUE}, an edge with a higher weight will be drawn with a wider line.
+The minimum width of a line and the maximum width can be supplied via the
+respective parameters.
+
+The \code{minWidth} is associated with a weight of 0.00, the maxWidth is
+related to the weight 1.00. When \code{widthType} is set to 'linear', the
+width of a line is linearly related to the weight. When \code{widthType} is
+set to 'sigmoid', the width of a line is determined via a sigmoid of the
+weight.
 }
 \examples{
 # First, we need a model that we want to visualise, we create
 # one using the learnModel function.
 fit <- learnModel(data = hmmaExampleData, amountOfStates = 3)
 
-# To visualise the states and transitions, we use the visualise method
-visualise(fit)
+# To visualise the states and transitions, we use the visualise method.
+# Only lines with a weight of 0.10 are drawn.
+visualise(fit, minProb = 0.10)
+
+# When it is not desired to relate the width of a line with its weight,
+# this can be disabled:
+visualise(fit, minProb = 0.10, relateWidthWithWeight = FALSE)
+
+# Finally, it is possible to use a sigmoid instead of a linear relation:
+visualise(fit, minProb = 0.10, widthType = 'sigmoid')
 
 # To visualise the BNs within the states, use the code below
 library(bnlearn)

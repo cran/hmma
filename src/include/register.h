@@ -1,7 +1,7 @@
 
 /* functions registered to make them visible to .Call() in R. */
 extern SEXP all_equal_bn(SEXP, SEXP);
-extern SEXP allsubs_test(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP allsubs_test(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP alpha_star(SEXP, SEXP, SEXP);
 extern SEXP amat2arcs(SEXP, SEXP);
 extern SEXP aracne(SEXP, SEXP, SEXP, SEXP, SEXP);
@@ -75,7 +75,7 @@ extern SEXP per_node_score(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP rbn_master(SEXP, SEXP, SEXP, SEXP);
 extern SEXP reset_test_counter();
 extern SEXP root_nodes(SEXP, SEXP);
-extern SEXP roundrobin_test(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
+extern SEXP roundrobin_test(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP score_cache_fill(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP score_delta(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP);
 extern SEXP shd(SEXP, SEXP, SEXP);

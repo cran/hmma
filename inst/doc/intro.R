@@ -16,6 +16,9 @@ fit$parms.emission[[1]]
 graphviz.plot(fit$parms.emission[[1]])
 
 ## -----------------------------------------------------------------------------
+visualise(fit, minProb = 0.10, minWidth = 0, maxWidth = 5, widthType = 'sigmoid')
+
+## -----------------------------------------------------------------------------
 training <- list()
 training$x <- hmmaExampleData$x[1:40,]
 training$N <- c(20, 20)

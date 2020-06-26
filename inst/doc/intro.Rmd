@@ -48,15 +48,24 @@ To visualise the model, the *visualise* function can be used:
 visualise(fit)
 ```
 
-This visualisation only shows the states and state transitions. The Bayesian networks are not visualised within the states as this would result in unreadable graphs. The Bayesian networks can be visualised using the *graphviz.plot* method from the *bnlearn* package. Each state can have a different Bayesian network. The BN for state 1 is visualised and inspected by:
+The Bayesian networks are not visualised within the states as this would result in unreadable graphs. The Bayesian networks can be visualised using the *graphviz.plot* method from the *bnlearn* package. Each state can have a different Bayesian network. The BN for state 1 is visualised and inspected by:
 
 ```{r}
 library(bnlearn)
 fit$parms.emission[[1]]
 graphviz.plot(fit$parms.emission[[1]])
 ```
-
 We see that an arrow is drawn from A to B but C is unconnected. The other two BNs have a different structure (try them out and verify).
+
+Large graphs can become cluttered with low-probability arcs. The *visualise* method has a parameter *minProb* that specifies what the minimum probability of an arc must be before it is drawn on the canvas. When we are only interested in arcs with a probability >= 0.10, we call the R code shown below. Note that we have 6 arcs less then the example above. 
+
+Furthermore, the width of an edge is linearly related to the weight of the edge. It is also possible to use a sigmoid relation between the weight of an edge and its width. Minimum width and maximum width can be specified when calling the *visualise* method.
+
+For more information, please refer to the documentation (*?visualise*).
+
+```{r}
+visualise(fit, minProb = 0.10, minWidth = 0, maxWidth = 5, widthType = 'sigmoid')
+```
 
 ### Using a training and validation data set
 Sometimes we want to use a training set and a validation set. Assume we have the following data sets:
@@ -203,6 +212,7 @@ To visualise the model and the different Bayesian networks within the states:
 ```{r}
 visualise(model = model)
 ```
+
 
 ```{r}
 graphviz.plot(model$parms.emission[[1]])

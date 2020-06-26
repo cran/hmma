@@ -31,7 +31,8 @@ test_that("Correct data is accepted", {
   data <- list()
   data$x <- data.frame("A" = c("TRUE", "TRUE", "FALSE", "FALSE"),
                        "B" = c("FALSE", "FALSE", "TRUE", "FALSE"),
-                       "C" = c("FALSE", "TRUE", "TRUE", "TRUE"))
+                       "C" = c("FALSE", "TRUE", "TRUE", "TRUE"),
+                       stringsAsFactors = TRUE)
   data$N <- c(2, 2)
 
   fit <- learnModel(data = data, amountOfStates = 2, seed = 3244)
@@ -45,7 +46,8 @@ test_that("Incorrect data is not accepted", {
   data <- list()
   data$x <- data.frame("A" = c("TRUE", "TRUE", "FALSE", "FALSE"),
                        "B" = c("FALSE", "FALSE", "FALSE", "FALSE"),
-                       "C" = c("FALSE", "TRUE", "TRUE", "TRUE"))
+                       "C" = c("FALSE", "TRUE", "TRUE", "TRUE"),
+                       stringsAsFactors = TRUE)
   data$N <- c(2, 3)
 
   expect_error(learnModel(data = data, amountOfStates = 2, seed = 3244))

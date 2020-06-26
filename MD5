@@ -1,6 +1,6 @@
-b73d834a6edb1f7cbe46beece9db234c *DESCRIPTION
+3a2e648d3c57b2b61be96712d770b204 *DESCRIPTION
 0b594f2a68e7dab2db5a30dbbe0bd750 *NAMESPACE
-6331ef1edadf81ba58f91ba4230684c9 *NEWS.md
+7ebfd19d40cbbce6dfa8c3e47fef8977 *NEWS.md
 b5c707fc5987d6c2905b96124610d303 *R/aic.hmmbn.R
 c5bd31f36be9e4b4124a9e37c9f85b33 *R/bn.fit.weight_cont.R
 0cc417438560eefa77c83926d3542554 *R/bnlearn_arc.operations.R
@@ -39,13 +39,13 @@ d30e371f459456fcbf9869814aa7056e *R/predict.hmma.R
 f48159118ed5ee854dd72ab8953a8892 *R/randomNumbers.R
 fab8f85a48c5192f9bc94a23950ba73b *R/rbn.hssm.R
 0579ab0a01765267e059dddbcbde37dc *R/simulate.hmma.R
-cfe502c4c5b5011bde787eb06fc14054 *R/visualise.R
+ebb3c77eaebe3e6b8af89f7b1c31c57f *R/visualise.R
 62ebc19439bf6aa3d80976df1e9a5f44 *README.md
-4550b232bd6ec026d16f551c263a6583 *build/vignette.rds
+c4da287f5df56d68b3a1cb1c873718c1 *build/vignette.rds
 b02bb0d7655f2d10886528d5635485dd *data/hmmaExampleData.RData
-0756439462e31d730ecec68ae3b4c953 *inst/doc/intro.R
-63203f0858eb4ebbb00cbd5b1e7c739f *inst/doc/intro.Rmd
-a296f74c67b3d7e75be5c3c74edb83d2 *inst/doc/intro.html
+fa54e8760fec35decf6afbf1a5019d41 *inst/doc/intro.R
+b4709d161ba23d8cb48953a15ad47b12 *inst/doc/intro.Rmd
+5005965c23beeafae3db822e5ac3949c *inst/doc/intro.html
 5f2cfe3cf8d9728a9e226f5e3f834075 *man/checkDataFile.Rd
 a746021d6db82ef698f672e229ff06af *man/createHmma.Rd
 f451cd23626bc53c11ae8b5153238d10 *man/createbn.Rd
@@ -57,8 +57,8 @@ e6253f2f82c7b2862d8631d94f63911d *man/hmmaExampleData.Rd
 6176f92ff3aa6a156215f2f84ca15e03 *man/randomNumbers.Rd
 c5c6abc120b2974e19cd5f88b673d24e *man/rbn.hssm.Rd
 acbaa071d84666e3a8102518f9d2fc33 *man/simulate.hmma.Rd
-25dc4c4575e5944976121f6f7611ab9e *man/visualise.Rd
-63ea39bf6e362b896dd6609fe35c8d08 *src/Makevars
+117176573ee16d50ca68e30e9f5b65ae *man/visualise.Rd
+1ccc1d7daac67528fb6f608feaaa6950 *src/Makevars
 5e8ce73e69db27ebc3d72c4f935594a4 *src/acyclic.c
 fe693dc6b4836dee5cf1093f58b46f80 *src/addAndDouble.c
 8f6702f303fd7140ccc050c307b55411 *src/allocations.c
@@ -119,7 +119,7 @@ f46430b13f531e945f8dcd01333958ac *src/include/learning.h
 51049643a5c4e3f5f4c0b16869f73cf7 *src/include/loss.h
 e42ff4df9588a24383f7bc446a63e658 *src/include/matrix.h
 b34ff7bcdddeb83915c088dbf0e98bd1 *src/include/rcore.h
-15d8964b84ba84d1339b31da77f4e683 *src/include/register.h
+7b74fa14e01e7942d53ab5a55c598e9e *src/include/register.h
 6e15b06ec5a8c6d011ce4783ec9ff47a *src/include/sampling.h
 4c0668704d97e017e7d21457e3b2cb7e *src/include/scores.h
 3a1ee3cd5b64ec177d94365c0cfedf28 *src/include/sets.h
@@ -160,6 +160,6 @@ d526792dee0b69210e43f9fa6f1e16fa *src/unique.c
 d7a383680234fa288f22e45c2c2df941 *src/utest.c
 cf05c8f0eb016d01c82e580d7ba1cba1 *src/which.max.c
 d566d3a04f4ac8531fd685c655eb0a45 *src/wishart.posterior.c
-7fe916511c67aeef8324c330981565ec *tests/testthat/testthat.R
+aef5e2bb3da25707dd318a788ff87fc9 *tests/testthat/testthat.R
 f974b4422ac3f9fa3190b079ef1d7a03 *vignettes/hmma.png
-63203f0858eb4ebbb00cbd5b1e7c739f *vignettes/intro.Rmd
+b4709d161ba23d8cb48953a15ad47b12 *vignettes/intro.Rmd
